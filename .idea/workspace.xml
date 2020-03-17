@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e02dcbd9-b095-47f9-94c4-38a4534b9a2f" name="Default Changelist" comment="" />
+    <list default="true" id="e02dcbd9-b095-47f9-94c4-38a4534b9a2f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +16,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -113,6 +120,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1ZDA6x9bXeYUsQKoZpZLcEdUGKw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -120,6 +128,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/images/login" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -151,7 +160,7 @@
       <option name="presentableId" value="Default" />
       <updated>1584363120401</updated>
       <workItem from="1584363123776" duration="2962000" />
-      <workItem from="1584385346073" duration="444000" />
+      <workItem from="1584385346073" duration="1436000" />
     </task>
     <servers />
   </component>
@@ -159,10 +168,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="662" y="257" width="670" height="526" key="search.everywhere.popup" timestamp="1584385707235">
+    <state x="662" y="257" width="670" height="526" key="search.everywhere.popup" timestamp="1584385998839">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="662" y="257" width="670" height="526" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1584385707235" />
+    <state x="662" y="257" width="670" height="526" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1584385998839" />
     <state x="945" y="331" width="670" height="676" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1584364473181" />
   </component>
 </project>
