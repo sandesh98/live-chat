@@ -22,6 +22,7 @@ window.axios = require('axios');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('login-component', require('./components/LoginComponent.vue').default);
+Vue.component('chat-component', require('./components/ChatComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

@@ -22,7 +22,8 @@
                                         id="email"
                                         type="text"
                                         name="email"
-                                        placeholder="email@domein.com">
+                                        placeholder="email@domein.com"
+                                        autofocus>
                                 </div>
                                 <div class="mb-6">
                                     <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
@@ -73,7 +74,7 @@ export default {
                     password: this.password
                 })
                 .then(response => {
-                    console.log(response);
+                    window.location.href = 'home';
                 })
             });
         }
