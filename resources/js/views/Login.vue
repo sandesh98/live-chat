@@ -59,25 +59,25 @@
 </template>
 
 <script>
-export default {
-    data() {
-        return {
-            email: '',
-            password: ''
-        }
-    },
-    methods: {
-        login() {
-            axios.get('/airlock/csrf-cookie').then(response => {
-                axios.post('/login', {
-                    email: this.email,
-                    password: this.password
-                })
-                .then(response => {
-                    window.location.href = 'home';
-                })
-            });
+    export default {
+        data() {
+            return {
+                email: 'test@test.com',
+                password: '123123'
+            }
+        },
+        methods: {
+            login() {
+                axios.get('/airlock/csrf-cookie').then(response => {
+                    axios.post('/login', {
+                        email: this.email,
+                        password: this.password
+                    })
+                    .then(response => {
+                        this.$router.push('chat')
+                    });
+                });
+            }
         }
     }
-}
 </script>
