@@ -34,7 +34,7 @@
                     <div class="bg-gray-800 border border-t-2 border-gray-900">
                         <div class="flex p-2 text-white">
                             <div class="border-r-2 border-gray-900 w-1/2 text-center">+</div>
-                            <div class="w-1/2 text-center">Opties</div>
+                            <a @click="logout" class="w-1/2 text-center hover:bg-gray-700 hover:rounded hover:text-gray-400 cursor-pointer">Uitloggen</a>
                         </div>
                     </div>
                 </div>
@@ -56,6 +56,15 @@
             axios.get('/api/user').then(response => {
                 this.name = response.data.name;
             });
+        },
+
+        methods: {
+            logout() {
+                console.log('logout');
+                axios.post('/logout').then(response => {
+                    this.$router.push('login')
+                })
+            }
         }
     }
 </script>

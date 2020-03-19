@@ -3,7 +3,8 @@ module.exports = {
     extend: {},
   },
   variants: {
-      textColor: ['group-hover'],
+      textColor: ['group-hover', 'hover'],
+      borderRadius: ['hover']
   },
   plugins: [],
 }

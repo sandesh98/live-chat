@@ -1966,6 +1966,16 @@ __webpack_require__.r(__webpack_exports__);
     axios.get('/api/user').then(function (response) {
       _this.name = response.data.name;
     });
+  },
+  methods: {
+    logout: function logout() {
+      var _this2 = this;
+
+      console.log('logout');
+      axios.post('/logout').then(function (response) {
+        _this2.$router.push('login');
+      });
+    }
   }
 });
 
@@ -2602,7 +2612,31 @@ var render = function() {
             0
           ),
           _vm._v(" "),
-          _vm._m(2)
+          _c(
+            "div",
+            { staticClass: "bg-gray-800 border border-t-2 border-gray-900" },
+            [
+              _c("div", { staticClass: "flex p-2 text-white" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "border-r-2 border-gray-900 w-1/2 text-center"
+                  },
+                  [_vm._v("+")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "w-1/2 text-center hover:bg-gray-700 hover:rounded hover:text-gray-400 cursor-pointer",
+                    on: { click: _vm.logout }
+                  },
+                  [_vm._v("Uitloggen")]
+                )
+              ])
+            ]
+          )
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "flex-1 bg-pink-500" }, [
@@ -2663,26 +2697,6 @@ var staticRenderFns = [
         [_vm._v("leuk man man bro...")]
       )
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "bg-gray-800 border border-t-2 border-gray-900" },
-      [
-        _c("div", { staticClass: "flex p-2 text-white" }, [
-          _c(
-            "div",
-            { staticClass: "border-r-2 border-gray-900 w-1/2 text-center" },
-            [_vm._v("+")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "w-1/2 text-center" }, [_vm._v("Opties")])
-        ])
-      ]
-    )
   }
 ]
 render._withStripped = true
