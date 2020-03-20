@@ -11,6 +11,7 @@ class ChatController extends Controller
     {
         $this->middleware('auth:airlock');
     }
+
     public function index()
     {
         return view('home');

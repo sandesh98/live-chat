@@ -89,14 +89,25 @@
                             </div>
                         </div>
 
+                        <!-- Chatbericht verstuurd naar marzinna -->
+                        <div class="flex justify-end pt-4 pr-4 ml-10">
+                            <div class="flex flex-col">
+                                <div class="text-gray-900 bg-gray-200 px-3 py-2 rounded shadow-lg">
+                                    Zak patat
+                                </div>
+                                <div class="text-xs text-gray-300">Verstuurd om: <span class="text-sm">15:00</span>
+                                </div>
+                            </div>
+                        </div>
+
 
                     </div>
                     <div class="bg-gray-900 border border-t-2 border-gray-900">
                         <form action="">
                             <div class="mx-3 py-3">
                                 <input
-                                    v-on:keydown.enter="send"
-                                    v-model="message"
+                                    v-on:keydown.enter.prevent="send"
+                                    v-model="body"
                                     class="bg-gray-600 appearance-none rounded w-full py-2 px-4 text-white leading-tight focus:outline-none focus:border-gray-100"
                                     id="inline-full-name" type="text" placeholder="Type een bericht" autocomplete="off"
                                     autofocus>
@@ -114,7 +125,7 @@
         data() {
             return {
                 name: '',
-                message: ''
+                body: ''
             }
         },
 
@@ -132,8 +143,12 @@
                 })
             },
             send() {
-                console.log(this.message);
                 // send message to server
+                axios.post('/message', {
+                    body: this.body
+                }).then(response => {
+                    console.log(response);
+                });
 
                 this.message = '';
             },

@@ -2019,11 +2019,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       name: '',
-      message: ''
+      body: ''
     };
   },
   mounted: function mounted() {
@@ -2043,8 +2054,12 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     send: function send() {
-      console.log(this.message); // send message to server
-
+      // send message to server
+      axios.post('/message', {
+        body: this.body
+      }).then(function (response) {
+        console.log(response);
+      });
       this.message = '';
     }
   }
@@ -2709,8 +2724,8 @@ var render = function() {
                       {
                         name: "model",
                         rawName: "v-model",
-                        value: _vm.message,
-                        expression: "message"
+                        value: _vm.body,
+                        expression: "body"
                       }
                     ],
                     staticClass:
@@ -2722,7 +2737,7 @@ var render = function() {
                       autocomplete: "off",
                       autofocus: ""
                     },
-                    domProps: { value: _vm.message },
+                    domProps: { value: _vm.body },
                     on: {
                       keydown: function($event) {
                         if (
@@ -2737,13 +2752,14 @@ var render = function() {
                         ) {
                           return null
                         }
+                        $event.preventDefault()
                         return _vm.send($event)
                       },
                       input: function($event) {
                         if ($event.target.composing) {
                           return
                         }
-                        _vm.message = $event.target.value
+                        _vm.body = $event.target.value
                       }
                     }
                   })
@@ -2917,6 +2933,28 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("div", { staticClass: "text-xs text-gray-300 justify-end" }, [
             _vm._v("Ontvangen om: "),
+            _c("span", { staticClass: "text-sm" }, [_vm._v("15:00")])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex justify-end pt-4 pr-4 ml-10" }, [
+        _c("div", { staticClass: "flex flex-col" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "text-gray-900 bg-gray-200 px-3 py-2 rounded shadow-lg"
+            },
+            [
+              _vm._v(
+                "\n                                Zak patat\n                            "
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "text-xs text-gray-300" }, [
+            _vm._v("Verstuurd om: "),
             _c("span", { staticClass: "text-sm" }, [_vm._v("15:00")])
           ])
         ])
