@@ -1954,10 +1954,76 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      name: ''
+      name: '',
+      message: ''
     };
   },
   mounted: function mounted() {
@@ -1975,6 +2041,11 @@ __webpack_require__.r(__webpack_exports__);
       axios.post('/logout').then(function (response) {
         _this2.$router.push('login');
       });
+    },
+    send: function send() {
+      console.log(this.message); // send message to server
+
+      this.message = '';
     }
   }
 });
@@ -2559,7 +2630,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "flex flex-col min-h-screen" }, [
+    _c("div", { staticClass: "flex flex-col h-screen min-h-screen" }, [
       _c("div", { staticClass: "flex" }, [
         _c("div", { staticClass: "flex-none w-64 bg-gray-900 text-white" }, [
           _c("div", { staticClass: "flex items-center p-6" }, [
@@ -2586,61 +2657,100 @@ var render = function() {
         _vm._m(0)
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "flex flex-1 bg-gray-700" }, [
-        _c("div", { staticClass: "flex flex-col justify-between" }, [
-          _c(
-            "div",
-            { staticClass: "flex-none w-64 bg-gray-800 px-6" },
-            _vm._l(3, function(i) {
-              return _c(
-                "a",
-                { staticClass: "flex items-center py-3", attrs: { href: "#" } },
-                [
-                  _c("img", {
-                    staticClass: "h-12 w-12 rounded-full border-white border",
-                    attrs: {
-                      src:
-                        "https://avatars2.githubusercontent.com/u/24436681?s=460&u=c003b36c6d044120eab5be0bf4aa3c5a8e5c4101&v=4",
-                      alt: ""
-                    }
-                  }),
+      _c("div", { staticClass: "flex flex-1 bg-gray-600 overflow-y-hidden" }, [
+        _c(
+          "div",
+          {
+            staticClass: "flex bg-gray-700 flex-none flex-col justify-between"
+          },
+          [
+            _vm._m(1),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "bg-gray-800 border border-t-2 border-gray-900" },
+              [
+                _c("div", { staticClass: "flex p-2 text-white" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "border-r-2 border-gray-900 w-1/2 text-center"
+                    },
+                    [_vm._v("+")]
+                  ),
                   _vm._v(" "),
-                  _vm._m(1, true)
-                ]
-              )
-            }),
-            0
-          ),
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "w-1/2 text-center hover:bg-gray-700 hover:rounded hover:text-gray-400 cursor-pointer",
+                      on: { click: _vm.logout }
+                    },
+                    [_vm._v("Uitloggen")]
+                  )
+                ])
+              ]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "flex flex-1  flex-col justify-between" }, [
+          _vm._m(2),
           _vm._v(" "),
           _c(
             "div",
-            { staticClass: "bg-gray-800 border border-t-2 border-gray-900" },
+            { staticClass: "bg-gray-900 border border-t-2 border-gray-900" },
             [
-              _c("div", { staticClass: "flex p-2 text-white" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "border-r-2 border-gray-900 w-1/2 text-center"
-                  },
-                  [_vm._v("+")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
+              _c("form", { attrs: { action: "" } }, [
+                _c("div", { staticClass: "mx-3 py-3" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.message,
+                        expression: "message"
+                      }
+                    ],
                     staticClass:
-                      "w-1/2 text-center hover:bg-gray-700 hover:rounded hover:text-gray-400 cursor-pointer",
-                    on: { click: _vm.logout }
-                  },
-                  [_vm._v("Uitloggen")]
-                )
+                      "bg-gray-600 appearance-none rounded w-full py-2 px-4 text-white leading-tight focus:outline-none focus:border-gray-100",
+                    attrs: {
+                      id: "inline-full-name",
+                      type: "text",
+                      placeholder: "Type een bericht",
+                      autocomplete: "off",
+                      autofocus: ""
+                    },
+                    domProps: { value: _vm.message },
+                    on: {
+                      keydown: function($event) {
+                        if (
+                          !$event.type.indexOf("key") &&
+                          _vm._k(
+                            $event.keyCode,
+                            "enter",
+                            13,
+                            $event.key,
+                            "Enter"
+                          )
+                        ) {
+                          return null
+                        }
+                        return _vm.send($event)
+                      },
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.message = $event.target.value
+                      }
+                    }
+                  })
+                ])
               ])
             ]
           )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "flex-1 bg-pink-500" }, [
-          _vm._v("Rest of the content")
         ])
       ])
     ])
@@ -2680,22 +2790,137 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "group flex flex-col ml-3" }, [
+    return _c("div", { staticClass: "w-64 bg-gray-800 overflow-y-auto" }, [
       _c(
-        "p",
-        {
-          staticClass: "text-lg text-white font-bold group-hover:text-gray-400"
-        },
-        [_vm._v("Sandesh")]
+        "a",
+        { staticClass: "flex items-center py-3 px-6", attrs: { href: "#" } },
+        [
+          _c("img", {
+            staticClass: "h-12 w-12 rounded-full border-white border",
+            attrs: {
+              src:
+                "https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/57056206_2930863426923875_2141733468474703872_o.jpg?_nc_cat=105&_nc_sid=85a577&_nc_ohc=uvhElWTD0P4AX_JOYiS&_nc_ht=scontent-amt2-1.xx&oh=1a56a80dfb3f55bebc5639ab119f99f5&oe=5E99683A",
+              alt: ""
+            }
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "group flex flex-col ml-3" }, [
+            _c(
+              "p",
+              {
+                staticClass:
+                  "text-lg text-white font-bold group-hover:text-gray-400"
+              },
+              [_vm._v("Marzinna")]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "text-gray-300 text-sm italic group-hover:text-gray-400"
+              },
+              [
+                _vm._v(
+                  "Doen met\n                                wat?\n                            "
+                )
+              ]
+            )
+          ])
+        ]
       ),
       _vm._v(" "),
       _c(
-        "div",
+        "a",
         {
-          staticClass: "text-gray-300 text-sm italic group-hover:text-gray-400"
+          staticClass: "flex items-center py-3 px-6 border-gray-900 border-t-2",
+          attrs: { href: "#" }
         },
-        [_vm._v("leuk man man bro...")]
+        [
+          _c("img", {
+            staticClass: "h-12 w-12 rounded-full border-white border",
+            attrs: {
+              src:
+                "https://scontent-ams4-1.xx.fbcdn.net/v/t1.0-1/c0.0.160.160a/p160x160/68644706_915280908864616_3153487567089827840_o.jpg?_nc_cat=100&_nc_sid=dbb9e7&_nc_ohc=5y7VVhFezmIAX9A6vVH&_nc_ht=scontent-ams4-1.xx&oh=b9d42e065e07b20a70ddf67c5b440e4c&oe=5E9B7439",
+              alt: ""
+            }
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "group flex flex-col ml-3" }, [
+            _c(
+              "p",
+              {
+                staticClass:
+                  "text-lg text-white font-bold group-hover:text-gray-400"
+              },
+              [_vm._v("\n                                <body>")]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "text-gray-300 text-sm italic group-hover:text-gray-400"
+              },
+              [
+                _vm._v(
+                  "Kijk die\n                                video\n                            "
+                )
+              ]
+            )
+          ])
+        ]
       )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "overflow-y-auto" }, [
+      _c("div", { staticClass: "flex justify-end pt-4 pr-4 pl-10" }, [
+        _c("div", { staticClass: "flex flex-col" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "text-gray-900 bg-gray-200 px-3 py-2 rounded shadow-lg"
+            },
+            [
+              _vm._v(
+                "\n                                Ewa glitch, zou je Amanda doen?\n                            "
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "text-xs text-gray-300" }, [
+            _vm._v("Verstuurd om: "),
+            _c("span", { staticClass: "text-sm" }, [_vm._v("15:00")])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex justify-start pt-4 pl-4 pr-10" }, [
+        _c("div", { staticClass: "flex flex-col" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "text-gray-900 bg-teal-200 px-3 py-2 rounded shadow-lg"
+            },
+            [
+              _vm._v(
+                "\n                                Doen met wat?\n                            "
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "text-xs text-gray-300 justify-end" }, [
+            _vm._v("Ontvangen om: "),
+            _c("span", { staticClass: "text-sm" }, [_vm._v("15:00")])
+          ])
+        ])
+      ])
     ])
   }
 ]

@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e02dcbd9-b095-47f9-94c4-38a4534b9a2f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/sass/scrollbar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/Chat.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Chat.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +22,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -141,6 +148,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -185,7 +193,9 @@
       <workItem from="1584385346073" duration="1436000" />
       <workItem from="1584556976161" duration="4420000" />
       <workItem from="1584567709810" duration="5636000" />
-      <workItem from="1584632406741" duration="1547000" />
+      <workItem from="1584632406741" duration="2180000" />
+      <workItem from="1584708380471" duration="1586000" />
+      <workItem from="1584710287696" duration="8518000" />
     </task>
     <servers />
   </component>
@@ -209,10 +219,14 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="1750" height="299" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1584566632387" />
-    <state x="945" y="331" width="670" height="676" key="search.everywhere.popup" timestamp="1584633641493">
+    <state x="811" y="359" key="SettingsEditor" timestamp="1584708635375">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="662" y="257" width="670" height="526" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1584570113293" />
-    <state x="945" y="331" width="670" height="676" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1584633641493" />
+    <state x="811" y="359" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1584708635375" />
+    <state x="662" y="257" width="670" height="526" key="search.everywhere.popup" timestamp="1584722473235">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="662" y="257" width="670" height="526" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1584722473235" />
+    <state x="945" y="331" width="670" height="676" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1584717010799" />
   </component>
 </project>
