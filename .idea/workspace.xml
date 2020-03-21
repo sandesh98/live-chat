@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e02dcbd9-b095-47f9-94c4-38a4534b9a2f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-    </list>
+    <list default="true" id="e02dcbd9-b095-47f9-94c4-38a4534b9a2f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +15,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -117,6 +119,7 @@
       <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
       <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
       <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/vendor/laravel/airlock" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ZDA6x9bXeYUsQKoZpZLcEdUGKw" />
@@ -137,17 +140,37 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js/views" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/images/login" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.phpunit.xml">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -161,6 +184,13 @@
       <updated>1584363120401</updated>
       <workItem from="1584363123776" duration="2962000" />
       <workItem from="1584385346073" duration="1436000" />
+      <workItem from="1584556976161" duration="4420000" />
+      <workItem from="1584567709810" duration="5636000" />
+      <workItem from="1584632406741" duration="2180000" />
+      <workItem from="1584708380471" duration="1586000" />
+      <workItem from="1584710287696" duration="9742000" />
+      <workItem from="1584728310787" duration="2907000" />
+      <workItem from="1584731900668" duration="155000" />
     </task>
     <servers />
   </component>
@@ -168,10 +198,30 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="662" y="257" width="670" height="526" key="search.everywhere.popup" timestamp="1584385998839">
+    <state width="1750" height="299" key="GridCell.Tab.0.bottom" timestamp="1584566632387">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="662" y="257" width="670" height="526" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1584385998839" />
-    <state x="945" y="331" width="670" height="676" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1584364473181" />
+    <state width="1750" height="299" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1584566632387" />
+    <state width="1750" height="299" key="GridCell.Tab.0.center" timestamp="1584566632386">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1750" height="299" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1584566632386" />
+    <state width="1750" height="299" key="GridCell.Tab.0.left" timestamp="1584566632386">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1750" height="299" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1584566632386" />
+    <state width="1750" height="299" key="GridCell.Tab.0.right" timestamp="1584566632387">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1750" height="299" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1584566632387" />
+    <state x="811" y="359" key="SettingsEditor" timestamp="1584708635375">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="811" y="359" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1584708635375" />
+    <state x="662" y="257" width="670" height="526" key="search.everywhere.popup" timestamp="1584731354137">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="662" y="257" width="670" height="526" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1584731354137" />
+    <state x="945" y="331" width="670" height="676" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1584717010799" />
   </component>
 </project>
