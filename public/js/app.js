@@ -2034,7 +2034,10 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       name: '',
-      body: ''
+      body: '',
+      chat: {
+        messages: []
+      }
     };
   },
   mounted: function mounted() {
@@ -2043,6 +2046,10 @@ __webpack_require__.r(__webpack_exports__);
     axios.get('/api/user').then(function (response) {
       _this.name = response.data.name;
     });
+    axios.get('/api/messages').then(function (response) {
+      _this.chat.messages.push(response.data);
+    });
+    console.log(this.chat.messages);
   },
   methods: {
     logout: function logout() {

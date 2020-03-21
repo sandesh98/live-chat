@@ -1,18 +1,23 @@
 <?php
 
-use App\Session;
+use App\Friend;
 use Illuminate\Database\Seeder;
 
-class SessionsTableSeeder extends Seeder
+class FriendsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run()
     {
-        Session::create([
+        Friend::create([
             'user_id' => 1,
             'friend_id' => 2,
+        ]);
+
+        Friend::create([
+            'user_id' => 1,
+            'friend_id' => 3,
         ]);
     }
 }

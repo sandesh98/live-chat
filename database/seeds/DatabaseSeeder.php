@@ -6,16 +6,14 @@ class DatabaseSeeder extends Seeder
 {
     /**
      * Seed the application's database.
-     *
-     * @return void
      */
     public function run()
     {
-         $this->call([
+        $this->call([
              UsersTableSeeder::class,
              SessionsTableSeeder::class,
              MessagesTableSeeder::class,
-             ChatsTableSeeder::class,
+             FriendsTableSeeder::class,
          ]);
     }
 }

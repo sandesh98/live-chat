@@ -7,19 +7,19 @@ class MessagesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
-     * @return void
      */
     public function run()
     {
         Message::create([
+            'user_id' => 1,
             'session_id' => 1,
-            'body' => 'Hallo alles goed?'
+            'body' => 'Bericht nummer 1',
         ]);
 
         Message::create([
+            'user_id' => 2,
             'session_id' => 1,
-            'body' => 'Ja man met jou?'
+            'body' => 'Bericht nummer 2',
         ]);
     }
 }

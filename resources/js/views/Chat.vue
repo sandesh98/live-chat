@@ -125,7 +125,10 @@
         data() {
             return {
                 name: '',
-                body: ''
+                body: '',
+                chat: {
+                    messages: []
+                }
             }
         },
 
@@ -133,6 +136,12 @@
             axios.get('/api/user').then(response => {
                 this.name = response.data.name;
             });
+
+            axios.get('/api/messages').then(response => {
+                this.chat.messages.push(response.data);
+            });
+
+            console.log(this.chat.messages)
         },
 
         methods: {

@@ -8,9 +8,16 @@ use Illuminate\Http\Request;
 
 class MessageController extends Controller
 {
+    public function index()
+    {
+        $messages = Message::all()->toArray();
+
+        return $messages;
+    }
+
     public function store(Request $request)
     {
-        $message = new Message;
+        $message = new Message();
         $message->session_id = 1;
         $message->body = $request->body;
         $message->save();
