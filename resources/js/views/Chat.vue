@@ -45,38 +45,39 @@
 
                 <div class="flex flex-1  flex-col justify-between">
                     <div class="overflow-y-auto">
+                        <message-component></message-component>
                         <!-- Chatbericht verstuurd naar marzinna -->
-                        <div class="flex justify-end pt-4 pr-4 pl-10">
-                            <div class="flex flex-col">
-                                <div class="text-gray-900 bg-gray-200 px-3 py-2 rounded shadow-lg">
-                                    Ewa glitch, zou je Amanda doen?
-                                </div>
-                                <div class="text-xs text-gray-300">Verstuurd om: <span class="text-sm">15:00</span>
-                                </div>
-                            </div>
-                        </div>
+<!--                        <div class="flex justify-end pt-4 pr-4 pl-10">-->
+<!--                            <div class="flex flex-col">-->
+<!--                                <div class="text-gray-900 bg-gray-200 px-3 py-2 rounded shadow-lg">-->
+<!--                                    Ewa glitch, zou je Amanda doen?-->
+<!--                                </div>-->
+<!--                                <div class="text-xs text-gray-300">Verstuurd om: <span class="text-sm">15:00</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
 
                         <!-- Chatbericht ontvangen vanuit marzinna -->
-                        <div class="flex justify-start pt-4 pl-4 pr-10">
-                            <div class="flex flex-col">
-                                <div class="text-gray-900 bg-teal-200 px-3 py-2 rounded shadow-lg">
-                                    Doen met wat?
-                                </div>
-                                <div class="text-xs text-gray-300 justify-end">Ontvangen om: <span
-                                    class="text-sm">15:00</span></div>
-                            </div>
-                        </div>
+<!--                        <div class="flex justify-start pt-4 pl-4 pr-10">-->
+<!--                            <div class="flex flex-col">-->
+<!--                                <div class="text-gray-900 bg-teal-200 px-3 py-2 rounded shadow-lg">-->
+<!--                                    Doen met wat?-->
+<!--                                </div>-->
+<!--                                <div class="text-xs text-gray-300 justify-end">Ontvangen om: <span-->
+<!--                                    class="text-sm">15:00</span></div>-->
+<!--                            </div>-->
+<!--                        </div>-->
 
                         <!-- Chatbericht verstuurd naar marzinna -->
-                        <div class="flex justify-end pt-4 pr-4 ml-10">
-                            <div class="flex flex-col">
-                                <div class="text-gray-900 bg-gray-200 px-3 py-2 rounded shadow-lg">
-                                    Zak patat
-                                </div>
-                                <div class="text-xs text-gray-300">Verstuurd om: <span class="text-sm">15:00</span>
-                                </div>
-                            </div>
-                        </div>
+<!--                        <div class="flex justify-end pt-4 pr-4 ml-10">-->
+<!--                            <div class="flex flex-col">-->
+<!--                                <div class="text-gray-900 bg-gray-200 px-3 py-2 rounded shadow-lg">-->
+<!--                                    Zak patat-->
+<!--                                </div>-->
+<!--                                <div class="text-xs text-gray-300">Verstuurd om: <span class="text-sm">15:00</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
 
 
                     </div>
@@ -100,6 +101,7 @@
 
 <script>
     import FriendComponent from "../components/FriendComponent";
+    import MessageComponent from "../components/MessageComponent";
 
     export default {
         data() {
@@ -113,17 +115,13 @@
         },
 
         components: {
-            FriendComponent
+            FriendComponent, MessageComponent
         },
 
         mounted() {
             axios.get('/api/user').then(response => {
                 this.name = response.data.name;
             });
-
-            // axios.get('/api/messages').then(response => {
-            //     this.chat.messages.push(response.data);
-            // });
         },
 
         methods: {

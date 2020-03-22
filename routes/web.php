@@ -21,7 +21,8 @@ Auth::routes();
 
 Route::get('/chat', 'ChatController@index')->name('chat.index');
 
-//Route::post('/message', 'Api\MessageController@store')->name('message.store');
-
-
 Route::get('friends', 'FriendController@index');
+
+Route::get('/messages', 'Api\MessageController@index');
+
+Route::post('/messages', 'Api\MessageController@store');

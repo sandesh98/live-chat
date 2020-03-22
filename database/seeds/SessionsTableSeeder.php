@@ -14,5 +14,10 @@ class SessionsTableSeeder extends Seeder
             'user_id' => 1,
             'friend_id' => 2,
         ]);
+
+        Session::create([
+            'user_id' => 3,
+            'friend_id' => 2,
+        ]);
     }
 }

@@ -7,4 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Session extends Model
 {
     protected $fillable = ['user_id', 'friend_id'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

@@ -8,10 +8,15 @@ use Illuminate\Http\Request;
 
 class MessageController extends Controller
 {
+    public function __construct()
+    {
+        return $this->middleware('auth:airlock');
+    }
+
     public function index()
     {
-        $messages = Message::all()->toArray();
-
+        $messages = auth()->user()->messages->where('session_id', 1);
+//        dd(auth()->user()->messages->where('session_id', 1));
         return $messages;
     }
 

@@ -25,5 +25,3 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:airlock')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-Route::get('/messages', 'Api\MessageController@index');

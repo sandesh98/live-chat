@@ -13,13 +13,19 @@ class MessagesTableSeeder extends Seeder
         Message::create([
             'user_id' => 1,
             'session_id' => 1,
-            'body' => 'Bericht nummer 1',
+            'body' => 'Bericht nummer 1, hoort bij sessie 1',
         ]);
 
         Message::create([
             'user_id' => 2,
             'session_id' => 1,
-            'body' => 'Bericht nummer 2',
+            'body' => 'Bericht nummer 2, hoort bij sessie 1',
+        ]);
+
+        Message::create([
+            'user_id' => 2,
+            'session_id' => 2,
+            'body' => 'Bericht nummer 2, hoort bij sessie 2',
         ]);
     }
 }
