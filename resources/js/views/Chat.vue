@@ -28,11 +28,8 @@
             <div class="flex flex-1 bg-gray-600 overflow-y-hidden">
                 <!-- Sidebar kolom -->
                 <div class="flex bg-gray-700 flex-none flex-col justify-between">
-
                     <div class="w-64 bg-gray-800 overflow-y-auto">
-
                         <friend-component></friend-component>
-
                     </div>
                     <div class="bg-gray-800 border border-t-2 border-gray-900">
                         <div class="flex p-2 text-white">
@@ -46,53 +43,8 @@
                 <div class="flex flex-1  flex-col justify-between">
                     <div class="overflow-y-auto">
                         <message-component></message-component>
-                        <!-- Chatbericht verstuurd naar marzinna -->
-<!--                        <div class="flex justify-end pt-4 pr-4 pl-10">-->
-<!--                            <div class="flex flex-col">-->
-<!--                                <div class="text-gray-900 bg-gray-200 px-3 py-2 rounded shadow-lg">-->
-<!--                                    Ewa glitch, zou je Amanda doen?-->
-<!--                                </div>-->
-<!--                                <div class="text-xs text-gray-300">Verstuurd om: <span class="text-sm">15:00</span>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-
-                        <!-- Chatbericht ontvangen vanuit marzinna -->
-<!--                        <div class="flex justify-start pt-4 pl-4 pr-10">-->
-<!--                            <div class="flex flex-col">-->
-<!--                                <div class="text-gray-900 bg-teal-200 px-3 py-2 rounded shadow-lg">-->
-<!--                                    Doen met wat?-->
-<!--                                </div>-->
-<!--                                <div class="text-xs text-gray-300 justify-end">Ontvangen om: <span-->
-<!--                                    class="text-sm">15:00</span></div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-
-                        <!-- Chatbericht verstuurd naar marzinna -->
-<!--                        <div class="flex justify-end pt-4 pr-4 ml-10">-->
-<!--                            <div class="flex flex-col">-->
-<!--                                <div class="text-gray-900 bg-gray-200 px-3 py-2 rounded shadow-lg">-->
-<!--                                    Zak patat-->
-<!--                                </div>-->
-<!--                                <div class="text-xs text-gray-300">Verstuurd om: <span class="text-sm">15:00</span>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-
-
                     </div>
-                    <div class="bg-gray-900 border border-t-2 border-gray-900">
-                        <form action="">
-                            <div class="mx-3 py-3">
-                                <input
-                                    v-on:keydown.enter.prevent="send"
-                                    v-model="body"
-                                    class="bg-gray-600 appearance-none rounded w-full py-2 px-4 text-white leading-tight focus:outline-none focus:border-gray-100"
-                                    id="inline-full-name" type="text" placeholder="Type een bericht" autocomplete="off"
-                                    autofocus>
-                            </div>
-                        </form>
-                    </div>
+                    <input-component></input-component>
                 </div>
             </div>
         </div>
@@ -102,20 +54,17 @@
 <script>
     import FriendComponent from "../components/FriendComponent";
     import MessageComponent from "../components/MessageComponent";
+    import InputComponent from "../components/InputComponent";
 
     export default {
         data() {
             return {
                 name: '',
-                body: '',
-                chat: {
-                    messages: []
-                }
             }
         },
 
         components: {
-            FriendComponent, MessageComponent
+            FriendComponent, MessageComponent, InputComponent
         },
 
         mounted() {
@@ -129,16 +78,6 @@
                 axios.post('/logout').then(response => {
                     this.$router.push('login')
                 })
-            },
-            send() {
-                // send message to server
-                axios.post('/message', {
-                    body: this.body
-                }).then(response => {
-                    console.log(response);
-                });
-
-                this.message = '';
             },
         }
     }

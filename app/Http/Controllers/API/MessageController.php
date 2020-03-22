@@ -25,8 +25,9 @@ class MessageController extends Controller
         $message = new Message();
         $message->session_id = 1;
         $message->body = $request->body;
+        $message->user_id = auth()->id();
         $message->save();
 
-        return response('Lekker man man bro');
+        return $message;
     }
 }

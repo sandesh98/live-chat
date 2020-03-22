@@ -26,6 +26,12 @@
             axios.get('/friends').then(response => {
                 this.friends = response.data;
             })
+        },
+
+        methods: {
+            kanker() {
+                console.log('kanker');
+            }
         }
     }
 </script>

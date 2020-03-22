@@ -15,6 +15,8 @@
 </template>
 
 <script>
+    import { eventBus } from '../events/event-bus';
+
     export default {
         data() {
             return {
@@ -23,9 +25,23 @@
         },
 
         mounted() {
-            axios.get('messages').then(response => {
-                this.messages = response.data;
+            this.getMessages();
+        },
+
+        created() {
+            eventBus.$on('get-messages', () => {
+                this.getMessages();
             })
         },
+
+        methods: {
+            getMessages() {
+                axios.get('/messages').then(response => {
+                    this.messages = response.data;
+                });
+            }
+        }
+
+
     }
 </script>
