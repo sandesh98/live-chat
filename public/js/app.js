@@ -2870,7 +2870,7 @@ var render = function() {
           {
             staticClass: "flex",
             class: [
-              message.user_id == 1
+              message.user_id === 1
                 ? "justify-end pt-4 pr-4 pl-10"
                 : "justify-start pt-4 pl-4 pr-10"
             ]
@@ -2881,7 +2881,7 @@ var render = function() {
                 "div",
                 {
                   staticClass: "text-gray-900 px-3 py-2 rounded shadow-lg",
-                  class: [message.user_id == 1 ? "bg-gray-200" : "bg-teal-200"]
+                  class: [message.user_id === 1 ? "bg-gray-200" : "bg-teal-200"]
                 },
                 [
                   _vm._v(
@@ -2892,7 +2892,15 @@ var render = function() {
                 ]
               ),
               _vm._v(" "),
-              _vm._m(0, true)
+              _c("div", { staticClass: "text-xs text-gray-300" }, [
+                _vm._v(
+                  _vm._s(message.user_id === 1 ? "Verstuurd" : "Ontvangen") +
+                    " om: "
+                ),
+                _c("span", { staticClass: "text-sm" }, [
+                  _vm._v(_vm._s(message.created_at))
+                ])
+              ])
             ])
           ]
         )
@@ -2901,17 +2909,7 @@ var render = function() {
     0
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "text-xs text-gray-300" }, [
-      _vm._v("Verstuurd om: "),
-      _c("span", { staticClass: "text-sm" }, [_vm._v("15:00")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
