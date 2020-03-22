@@ -17,7 +17,7 @@ const router = new VueRouter({
         {
             path: '/chat',
             name: 'chat',
-            component: Chat
+            component: Chat,
         }
     ]
 })

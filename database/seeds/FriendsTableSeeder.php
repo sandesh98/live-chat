@@ -1,6 +1,5 @@
 <?php
 
-use App\Friend;
 use Illuminate\Database\Seeder;
 
 class FriendsTableSeeder extends Seeder
@@ -10,14 +9,20 @@ class FriendsTableSeeder extends Seeder
      */
     public function run()
     {
-        Friend::create([
-            'user_id' => 1,
-            'friend_id' => 2,
-        ]);
-
-        Friend::create([
-            'user_id' => 1,
-            'friend_id' => 3,
-        ]);
+        DB::table('friend_user')
+            ->insert([
+                [
+                    'user_id' => 1,
+                    'friend_id' => 2
+                ],
+                [
+                    'user_id' => 1,
+                    'friend_id' => 3
+                ],
+                [
+                    'user_id' => 2,
+                    'friend_id' => 3
+                ]
+            ]);
     }
 }

@@ -30,30 +30,8 @@
                 <div class="flex bg-gray-700 flex-none flex-col justify-between">
 
                     <div class="w-64 bg-gray-800 overflow-y-auto">
-                        <a href="#" class="flex items-center py-3 px-6">
-                            <img class="h-12 w-12 rounded-full border-white border"
-                                 src="https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/57056206_2930863426923875_2141733468474703872_o.jpg?_nc_cat=105&_nc_sid=85a577&_nc_ohc=uvhElWTD0P4AX_JOYiS&_nc_ht=scontent-amt2-1.xx&oh=1a56a80dfb3f55bebc5639ab119f99f5&oe=5E99683A"
-                                 alt="">
-                            <div class="group flex flex-col ml-3">
-                                <p class="text-lg text-white font-bold group-hover:text-gray-400">Marzinna</p>
-                                <div class="text-gray-300 text-sm italic group-hover:text-gray-400">Doen met
-                                    wat?
-                                </div>
-                            </div>
-                        </a>
 
-                        <a href="#" class="flex items-center py-3 px-6 border-gray-900 border-t-2">
-                            <img class="h-12 w-12 rounded-full border-white border"
-                                 src="https://scontent-ams4-1.xx.fbcdn.net/v/t1.0-1/c0.0.160.160a/p160x160/68644706_915280908864616_3153487567089827840_o.jpg?_nc_cat=100&_nc_sid=dbb9e7&_nc_ohc=5y7VVhFezmIAX9A6vVH&_nc_ht=scontent-ams4-1.xx&oh=b9d42e065e07b20a70ddf67c5b440e4c&oe=5E9B7439"
-                                 alt="">
-                            <div class="group flex flex-col ml-3">
-                                <p class="text-lg text-white font-bold group-hover:text-gray-400">
-                                    &lt;body&gt;</p>
-                                <div class="text-gray-300 text-sm italic group-hover:text-gray-400">Kijk die
-                                    video
-                                </div>
-                            </div>
-                        </a>
+                        <friend-component></friend-component>
 
                     </div>
                     <div class="bg-gray-800 border border-t-2 border-gray-900">
@@ -121,6 +99,8 @@
 </template>
 
 <script>
+    import FriendComponent from "../components/FriendComponent";
+
     export default {
         data() {
             return {
@@ -132,21 +112,22 @@
             }
         },
 
+        components: {
+            FriendComponent
+        },
+
         mounted() {
             axios.get('/api/user').then(response => {
                 this.name = response.data.name;
             });
 
-            axios.get('/api/messages').then(response => {
-                this.chat.messages.push(response.data);
-            });
-
-            console.log(this.chat.messages)
+            // axios.get('/api/messages').then(response => {
+            //     this.chat.messages.push(response.data);
+            // });
         },
 
         methods: {
             logout() {
-                console.log('logout');
                 axios.post('/logout').then(response => {
                     this.$router.push('login')
                 })
