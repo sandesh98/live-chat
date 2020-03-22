@@ -2881,7 +2881,7 @@ var render = function() {
                 "div",
                 {
                   staticClass: "text-gray-900 px-3 py-2 rounded shadow-lg",
-                  class: [message.user == 1 ? "bg-gray-200" : "bg-teal-200"]
+                  class: [message.user_id == 1 ? "bg-gray-200" : "bg-teal-200"]
                 },
                 [
                   _vm._v(
