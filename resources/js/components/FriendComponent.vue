@@ -27,11 +27,5 @@
                 this.friends = response.data;
             })
         },
-
-        methods: {
-            kanker() {
-                console.log('kanker');
-            }
-        }
     }
 </script>

@@ -1936,11 +1936,6 @@ __webpack_require__.r(__webpack_exports__);
     axios.get('/friends').then(function (response) {
       _this.friends = response.data;
     });
-  },
-  methods: {
-    kanker: function kanker() {
-      console.log('kanker');
-    }
   }
 });
 

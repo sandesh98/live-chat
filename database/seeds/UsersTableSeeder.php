@@ -24,14 +24,14 @@ class UsersTableSeeder extends Seeder
         User::create([
             'name' => 'Martijn',
             'email' => 'martijn@test.com',
-            'image' => 'https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/57056206_2930863426923875_2141733468474703872_o.jpg?_nc_cat=105&_nc_sid=85a577&_nc_ohc=uvhElWTD0P4AX_JOYiS&_nc_ht=scontent-amt2-1.xx&oh=1a56a80dfb3f55bebc5639ab119f99f5&oe=5E99683A',
+            'image' => 'https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/57056206_2930863426923875_2141733468474703872_o.jpg?_nc_cat=105&_nc_sid=85a577&_nc_ohc=L8Tn2e2AXuMAX_nzziL&_nc_ht=scontent-amt2-1.xx&oh=77675e91ecd7fc5466db6541ff1b1c24&oe=5EC4E9BA',
             'password' => $password
         ]);
 
         User::create([
             'name' => 'Bodhi',
             'email' => 'bodhi@test.com',
-            'image' => 'https://scontent-ams4-1.xx.fbcdn.net/v/t1.0-1/c0.0.160.160a/p160x160/68644706_915280908864616_3153487567089827840_o.jpg?_nc_cat=100&_nc_sid=dbb9e7&_nc_ohc=5y7VVhFezmIAX9A6vVH&_nc_ht=scontent-ams4-1.xx&oh=b9d42e065e07b20a70ddf67c5b440e4c&oe=5E9B7439',
+            'image' => 'https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/68644706_915280908864616_3153487567089827840_o.jpg?_nc_cat=100&_nc_sid=85a577&_nc_ohc=aQRxgamYEP8AX_IIHKd&_nc_ht=scontent-amt2-1.xx&oh=055664a8c0aa66888e4aa82651019ca4&oe=5EC5A35B',
             'password' => $password
         ]);
     }
